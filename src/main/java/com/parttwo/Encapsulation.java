@@ -76,5 +76,18 @@ public class Encapsulation {
     // Override metod, daha dar bir exception fırlatabilir.
     // Final anahtar kelimesiyle işaretlenmiş bir metod override edilemez.
     // Static anahtar kelimesiyle işaretlenmiş bir metod override edilemez.
-    // Bir metod kalıtılamıyorsa override edilemez. 
+    // Bir metod kalıtılamıyorsa override edilemez.
+    
+    /* -- Invoking a supertype Version of an Overriden Method -- */
+
+    // Eğer süper tip bir metod versiyonun bazı kodlarının avantajlarını almak istiyorsan bazı ek davranışlar sağlamak için override etmelisin.
+    // Metodu super tip versiyon ile çalıştır ve sonra geri dönüp alt tür ek metod koduyla çalıştır.
+    // Üst tip sürümünün alt tür kodundan önce çalıştırılması gerekmediğini unutmayın (Örnek: test --> Horse class).
+    // Bir interface in override edilen metoduna erişim syntax'ı --> "InterfaceX.super.doStuff();" şeklinde olmalıdır.
+    // Override edilecek bir metodu çağırmak için "super" kullanmak yalnızca instance metodlara uygulanabilir.
+    // static metodların override edilemeyeceğini unutmayın.
+    // "super" anahtar kelimesini, sadece bir üst türün bir metoduna erişmek için kullanabilirisiniz (super.super.doStuff() diyemezsiniz.).
+    // Override edilen bir metod class ında, bir polimorfik (supertype) referans ile, override edilen metoda başvurursanız, compiler sizin süper tip versiyonu çağırdığınızı varsayacaktır.
+    // Eğer süper tip versiyonu "checked exception" olarak tanımlanmış ise fakat override edilen metod alt class'ta eksik olduğundan derleyici hala bir istisna metod çağırdığını düşünür (Örnek: test2 --> Dog2).
+
 }
